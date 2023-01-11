@@ -15,7 +15,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title }) => {
+const Project = ({ title, detail }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -24,10 +24,9 @@ const Project = ({ title }) => {
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
-        </p>
+        <a className="mt-7" href={detail} target="_blank" rel="noreferrer">
+          Click here to learn more about this project!
+        </a>
       </div>
       <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
     </motion.div>
@@ -79,17 +78,38 @@ const Projects = () => {
           >
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title="Project 1" />
-          <Project title="Project 2" />
+          <Project
+            title="Project 1"
+            detail="https://front-end-1.herokuapp.com/"
+          />
+          <Project
+            title="Project 2"
+            detail="https://graceful-seahorse-9b8bc3.netlify.app/"
+          />
 
           {/* ROW 2 */}
-          <Project title="Project 3" />
-          <Project title="Project 4" />
-          <Project title="Project 5" />
+          <Project
+            title="Project 3"
+            detail="https://parifranco8.github.io/animated-navigation/"
+          />
+          <Project
+            title="Project 4"
+            detail="https://fitness-app-3ak.pages.dev/"
+          />
+          <Project
+            title="Project 5"
+            detail="https://parifranco8.github.io/music-player/"
+          />
 
           {/* ROW 3 */}
-          <Project title="Project 6" />
-          <Project title="Project 7" />
+          <Project
+            title="Project 6"
+            detail="https://parifranco8.github.io/pong/"
+          />
+          <Project
+            title="Project 7"
+            detail="https://illustrious-centaur-efe6f5.netlify.app/"
+          />
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
