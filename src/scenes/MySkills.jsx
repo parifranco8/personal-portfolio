@@ -127,8 +127,8 @@ const MySkills = () => {
           </div>
           <p className="mt-10">
             Actively trying to leverage my skillset with new technologies.
-            Currently learning Next.js and automation tools to become a more
-            complete developer day by day.
+            Currently learning Python, Typescript, and Unit testing to become a
+            more complete developer day by day.
           </p>
         </motion.div>
       </div>
